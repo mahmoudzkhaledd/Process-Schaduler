@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Processor\UserProcessor\UserProcessor.cpp">
+      <Filter>Processor\UserProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="Processor\SystemProcessor\SystemProcessor.cpp">
+      <Filter>Processor\SystemProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="Processor\MainProcessor.cpp">
+      <Filter>Processor</Filter>
+    </ClCompile>
+    <ClCompile Include="Scheduler\Scheduler.cpp">
+      <Filter>Scheduler</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="DataStructures">
+      <UniqueIdentifier>{74af3475-f693-4e85-ab9f-b4054dc67560}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Processor">
+      <UniqueIdentifier>{ad40994c-bb6d-4450-8e5b-5d06b3ba212a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Processor\UserProcessor">
+      <UniqueIdentifier>{559ff44e-75b8-44b8-a54d-9755768f82b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Processor\SystemProcessor">
+      <UniqueIdentifier>{81db0fd0-64b9-46d0-9949-fe9bb36edf77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scheduler">
+      <UniqueIdentifier>{db6d903d-8c8c-4956-aa49-e2b3227f3ea2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DataStructures\LinkedList.h">
+      <Filter>DataStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructures\Queue.h">
+      <Filter>DataStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructures\Stack.h">
+      <Filter>DataStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="Processor\UserProcessor\UserProcessor.h">
+      <Filter>Processor\UserProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="Processor\SystemProcessor\SystemProcessor.h">
+      <Filter>Processor\SystemProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="Processor\MainProcessor.h">
+      <Filter>Processor</Filter>
+    </ClInclude>
+    <ClInclude Include="Scheduler\Scheduler.h">
+      <Filter>Scheduler</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
