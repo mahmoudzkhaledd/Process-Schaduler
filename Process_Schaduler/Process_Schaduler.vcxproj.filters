@@ -14,6 +14,9 @@
     <ClCompile Include="Scheduler\Scheduler.cpp">
       <Filter>Scheduler</Filter>
     </ClCompile>
+    <ClCompile Include="Process\Process.cpp">
+      <Filter>Process</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="DataStructures">
@@ -30,6 +33,9 @@
     </Filter>
     <Filter Include="Scheduler">
       <UniqueIdentifier>{db6d903d-8c8c-4956-aa49-e2b3227f3ea2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Process">
+      <UniqueIdentifier>{b729fa11-8270-4f45-8eb1-7973543455b2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -53,6 +59,9 @@
     </ClInclude>
     <ClInclude Include="Scheduler\Scheduler.h">
       <Filter>Scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="Process\Process.h">
+      <Filter>Process</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -131,6 +131,7 @@
     <ClCompile Include="Processor\MainProcessor.cpp" />
     <ClCompile Include="Processor\SystemProcessor\SystemProcessor.cpp" />
     <ClCompile Include="Processor\UserProcessor\UserProcessor.cpp" />
+    <ClCompile Include="Process\Process.cpp" />
     <ClCompile Include="Scheduler\Scheduler.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -140,6 +141,7 @@
     <ClInclude Include="Processor\MainProcessor.h" />
     <ClInclude Include="Processor\SystemProcessor\SystemProcessor.h" />
     <ClInclude Include="Processor\UserProcessor\UserProcessor.h" />
+    <ClInclude Include="Process\Process.h" />
     <ClInclude Include="Scheduler\Scheduler.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
