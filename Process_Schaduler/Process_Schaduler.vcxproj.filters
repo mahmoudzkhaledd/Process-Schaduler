@@ -17,6 +17,12 @@
     <ClCompile Include="Process\Process.cpp">
       <Filter>Process</Filter>
     </ClCompile>
+    <ClCompile Include="UILayer\UI.cpp">
+      <Filter>UILayer</Filter>
+    </ClCompile>
+    <ClCompile Include="FilesLayer\FileLayer.cpp">
+      <Filter>FilesLayer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="DataStructures">
@@ -36,6 +42,12 @@
     </Filter>
     <Filter Include="Process">
       <UniqueIdentifier>{b729fa11-8270-4f45-8eb1-7973543455b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UILayer">
+      <UniqueIdentifier>{551184e3-dfa0-4f82-af24-d276022beea1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FilesLayer">
+      <UniqueIdentifier>{0d01fc03-b913-415b-b9d1-061aba53c1b9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -62,6 +74,12 @@
     </ClInclude>
     <ClInclude Include="Process\Process.h">
       <Filter>Process</Filter>
+    </ClInclude>
+    <ClInclude Include="UILayer\UI.h">
+      <Filter>UILayer</Filter>
+    </ClInclude>
+    <ClInclude Include="FilesLayer\FileLayer.h">
+      <Filter>FilesLayer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
