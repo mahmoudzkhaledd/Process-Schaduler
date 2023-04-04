@@ -49,6 +49,9 @@
     <Filter Include="FilesLayer">
       <UniqueIdentifier>{0d01fc03-b913-415b-b9d1-061aba53c1b9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Process\NewFilter1">
+      <UniqueIdentifier>{b73280dc-c75b-45f8-9da1-bf89b3019bd1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DataStructures\LinkedList.h">

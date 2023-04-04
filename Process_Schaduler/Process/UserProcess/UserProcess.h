@@ -10,7 +10,6 @@ enum ProcessState {
 class Process {
 public:
 	int pid;
-	int numOfIoReqs;
 	int arrivalTime;
 	int responseTime;
 	int cupTime;

@@ -2,7 +2,6 @@
 
 Processor::Processor() {
 	state = IDLE;
-
 }
 
 void Processor::executeNextProcess() {
