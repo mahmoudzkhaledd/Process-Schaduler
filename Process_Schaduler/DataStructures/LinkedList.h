@@ -4,12 +4,12 @@
 
 using namespace std;
 template <class T>
-class LinkedList {
+class List {
 private:
 	vector<T> v;
 public:
 	int count = 0;
-	LinkedList() {}
+	List() {}
 	T elementAt(int index){
 		return v[index];
 	}
