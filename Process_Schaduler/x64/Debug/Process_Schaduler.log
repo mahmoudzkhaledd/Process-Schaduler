@@ -1,7 +1,4 @@
-﻿  FileLayer.cpp
-  MainProcessor.cpp
-  Scheduler.cpp
+﻿  Scheduler.cpp
   UI.cpp
-  main.cpp
   Generating Code...
   Process_Schaduler.vcxproj -> E:\Process_Schaduler\x64\Debug\Process_Schaduler.exe

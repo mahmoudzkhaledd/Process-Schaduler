@@ -6,15 +6,15 @@ Processor::Processor(ProcessorType t) {
 	exepectedTimeToFinish = 0;
 }
 
-void Processor::addProcess(Process process) {
+void Processor::addProcess(Process* process) {
 	readyProcesses.enQueue(process);
-	exepectedTimeToFinish += process.cpuTime;
+	exepectedTimeToFinish += process->cpuTime;
 }
 
 void Processor::finishProcess() {
 	if (!readyProcesses.isEmpty()) {
-		Process p = readyProcesses.top();
-		exepectedTimeToFinish -= p.cpuTime;
+		Process* p = readyProcesses.top();
+		exepectedTimeToFinish -= p->cpuTime;
 		readyProcesses.dequeue();
 	}
 }

@@ -8,7 +8,7 @@ void RRProcessor::executeNextProcess() {
 }
 
 void RRProcessor::sceduleAlgo() {
-	Process p = readyProcesses.top();
+	Process* p = readyProcesses.top();
 	runProcesses.insert(p);
 	readyProcesses.dequeue();
 }

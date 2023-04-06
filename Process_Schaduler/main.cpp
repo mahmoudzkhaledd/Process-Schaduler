@@ -1,9 +1,11 @@
 #include<iostream>
 #include"DataStructures/Queue/Queue.h"
 #include "FilesLayer/FileLayer.h"
+#include "Scheduler/Scheduler.h"
 #define null NULL
 using namespace std;
 int main() {
-	FileLayer file;
-	file.loadInputFile();
+	Scheduler s;
+	s.loadProcess();
+
 }

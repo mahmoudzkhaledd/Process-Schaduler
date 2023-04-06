@@ -3,7 +3,7 @@
 #include <fstream>
 #include "../DataStructures/List/List.h"
 #include "../Process/Process.h"
-List<Process> FileLayer::loadInputFile() {
+List<Process*> FileLayer::loadInputFile() {
 	fstream stream;
 	stream.open("file.txt");
 	int fcfsNum = 0, sjfNum = 0, rrNum = 0;
@@ -20,16 +20,13 @@ List<Process> FileLayer::loadInputFile() {
 		forkProb;
 	int n;
 	stream >> n;
-	List<Process> process;
+	List<Process*> process;
 	for (int i = 0; i < n; i++) {
-		Process p;
-		stream >> p.arrivalTime >> p.pid >> p.cpuTime >> p.numOfIoReqs;
+		Process* p = new Process();
+		stream >> p->arrivalTime >> p->pid >> p->cpuTime >> p->numOfIoReqs;
 		process.insert(p);
 	}
-	for (int i = 0; i < process.count; i++) {
-		cout << process.ElementAt(i).arrivalTime << " " << process.ElementAt(i).pid <<" " 
-			 << process.ElementAt(i).cpuTime     << " " << process.ElementAt(i).numOfIoReqs<<endl;
-	}
+	
 	stream.close();
 	return process;
 }

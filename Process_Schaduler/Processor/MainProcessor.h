@@ -26,7 +26,7 @@ public:
 	ProcessorType type;
 	Processor(ProcessorType t);
 
-	void addProcess(Process process);
+	void addProcess(Process* process);
 	void finishProcess();
 	virtual void executeNextProcess() = 0;
 	virtual void sceduleAlgo() = 0;

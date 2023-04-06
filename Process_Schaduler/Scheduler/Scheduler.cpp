@@ -1,6 +1,6 @@
 #include "Scheduler.h"
 #include "../Processor/MainProcessor.h"
-
+#include "../FilesLayer/FileLayer.h"
 void Scheduler::nextTimeStep() {
 	
 }
@@ -18,7 +18,12 @@ Processor* Scheduler::getShortestProcessor() {
 }
 
 void Scheduler::loadProcess() {
-	// make process new state.
+	FileLayer f;
+	NEWList = f.loadInputFile();
+	for (int i = 0; i < NEWList.count; i++) {
+		cout << NEWList.ElementAt(i)->arrivalTime << " " << NEWList.ElementAt(i)->pid << " "
+			<< NEWList.ElementAt(i)->cpuTime << " " << NEWList.ElementAt(i)->numOfIoReqs << endl;
+	}
 }
 
 void Scheduler::NEWToRDY(Processor* p) {
@@ -32,8 +37,8 @@ void Scheduler::NEWToRDY(Processor* p) {
 			minProc = NEWList.ElementAt(i);
 		}
 	}
-	Processor* p = getShortestProcessor();
-	p->readyProcesses.enQueue(minProc);
+	Processor* prr = getShortestProcessor();
+	prr->readyProcesses.enQueue(minProc);
 	minProc->state = RDY;
 	NEWList.Delete(minProc);
 }

@@ -5,5 +5,5 @@
 
 class FileLayer {
 public:
-	List<Process> loadInputFile();
+	List<Process*> loadInputFile();
 };

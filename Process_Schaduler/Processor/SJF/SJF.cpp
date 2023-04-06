@@ -7,7 +7,7 @@ void SJFProcessor::executeNextProcess(){
 }
 
 void SJFProcessor::sceduleAlgo() {
-	Process p = readyProcesses.top();
+	Process* p = readyProcesses.top();
 	runProcesses.insert(p);
 	readyProcesses.dequeue();
 }
