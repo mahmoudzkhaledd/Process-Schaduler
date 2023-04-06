@@ -20,15 +20,16 @@ class Processor {
 public:
 	
 	int exepectedTimeToFinish;
-
-	Queue<Process> readyProcess;
+	List<Process> runProcesses;
+	Queue<Process> readyProcesses;
 	ProcessorState state;
 	ProcessorType type;
 	Processor(ProcessorType t);
 
 	void addProcess(Process process);
 	void finishProcess();
-	virtual void executeNextProcess();
+	virtual void executeNextProcess() = 0;
+	virtual void sceduleAlgo() = 0;
 	void updateState();
 	int getUtilTime();
 	

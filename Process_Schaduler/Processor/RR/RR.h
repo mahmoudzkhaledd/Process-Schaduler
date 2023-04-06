@@ -5,4 +5,5 @@ class RRProcessor : public Processor {
 
 	RRProcessor(ProcessorType type);
 	virtual void executeNextProcess();
+	virtual void sceduleAlgo();
 };

@@ -6,3 +6,9 @@ RRProcessor::RRProcessor(ProcessorType type) : Processor(type) {
 void RRProcessor::executeNextProcess() {
 
 }
+
+void RRProcessor::sceduleAlgo() {
+	Process p = readyProcesses.top();
+	runProcesses.insert(p);
+	readyProcesses.dequeue();
+}

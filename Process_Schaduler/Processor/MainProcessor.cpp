@@ -7,24 +7,20 @@ Processor::Processor(ProcessorType t) {
 }
 
 void Processor::addProcess(Process process) {
-	readyProcess.enQueue(process);
+	readyProcesses.enQueue(process);
 	exepectedTimeToFinish += process.cpuTime;
 }
 
 void Processor::finishProcess() {
-	if (!readyProcess.isEmpty()) {
-		Process p = readyProcess.top();
+	if (!readyProcesses.isEmpty()) {
+		Process p = readyProcesses.top();
 		exepectedTimeToFinish -= p.cpuTime;
-		readyProcess.dequeue();
+		readyProcesses.dequeue();
 	}
 }
 
-void Processor::executeNextProcess() {
-
-}
-
 void Processor::updateState() {
-	if (readyProcess.isEmpty()) state = IDLE;
+	if (readyProcesses.isEmpty()) state = IDLE;
 	else state = BUSY;
 }
 

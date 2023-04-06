@@ -3,4 +3,5 @@
 class SJFProcessor : public Processor {
 	SJFProcessor(ProcessorType type);
 	virtual void executeNextProcess();
+	virtual void sceduleAlgo();
 };
