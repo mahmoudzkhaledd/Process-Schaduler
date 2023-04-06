@@ -7,7 +7,7 @@ void FileLayer::loadInputFile() {
 	fstream stream;
 	stream.open("file.txt");
 	int fcfsNum = 0, sjfNum = 0, rrNum = 0;
-	int rrTimeSlice;
+	int rrTimeSlice; 
 	int rtf, maxW, stl, forkProb;
 	stream >> 
 		fcfsNum >>
