@@ -1,7 +1,7 @@
 #pragma once
 #include"../Processor/MainProcessor.h"
-#include "../DataStructures/LinkedList.h"
-#include "../DataStructures/Queue.h"
+#include "../DataStructures/List/List.h"
+#include "../DataStructures/Queue/Queue.h"
 
 class UI {
 public:

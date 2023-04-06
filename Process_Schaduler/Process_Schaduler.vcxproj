@@ -131,16 +131,22 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Processor\MainProcessor.cpp" />
     <ClCompile Include="Process\Process.cpp" />
+    <ClCompile Include="Process\SystemProcess\SystemPocess.cpp" />
+    <ClCompile Include="Process\UserProcess\UserProcess.cpp" />
     <ClCompile Include="Scheduler\Scheduler.cpp" />
     <ClCompile Include="UILayer\UI.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DataStructures\LinkedList.h" />
-    <ClInclude Include="DataStructures\Queue.h" />
-    <ClInclude Include="DataStructures\Stack.h" />
+    <ClInclude Include="DataStructures\List\List.h" />
+    <ClInclude Include="DataStructures\Node.h" />
+    <ClInclude Include="DataStructures\PQueue\PQueue.h" />
+    <ClInclude Include="DataStructures\Queue\Queue.h" />
+    <ClInclude Include="DataStructures\Stack\Stack.h" />
     <ClInclude Include="FilesLayer\FileLayer.h" />
     <ClInclude Include="Processor\MainProcessor.h" />
     <ClInclude Include="Process\Process.h" />
+    <ClInclude Include="Process\SystemProcess\SystemPocess.h" />
+    <ClInclude Include="Process\UserProcess\UserProcess.h" />
     <ClInclude Include="Scheduler\Scheduler.h" />
     <ClInclude Include="UILayer\UI.h" />
   </ItemGroup>

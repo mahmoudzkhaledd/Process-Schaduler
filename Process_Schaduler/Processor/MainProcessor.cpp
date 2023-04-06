@@ -5,6 +5,19 @@ Processor::Processor(ProcessorType t) {
 	state = IDLE;
 }
 
+void Processor::addProcess(Process process) {
+	readyProcess.enQueue(process);
+	exepectedTimeToFinish += process.cupTime;
+}
+
+void Processor::finishProcess() {
+	if (!readyProcess.isEmpty()) {
+		Process p = readyProcess.top();
+		exepectedTimeToFinish -= p.cupTime;
+		readyProcess.dequeue();
+	}
+}
+
 void Processor::executeNextProcess() {
 
 }

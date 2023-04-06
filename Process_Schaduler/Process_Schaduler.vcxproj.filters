@@ -17,11 +17,14 @@
     <ClCompile Include="FilesLayer\FileLayer.cpp">
       <Filter>FilesLayer</Filter>
     </ClCompile>
+    <ClCompile Include="Process\SystemProcess\SystemPocess.cpp">
+      <Filter>Process\SystemProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="Process\UserProcess\UserProcess.cpp">
+      <Filter>Process\UserProcess</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="DataStructures">
-      <UniqueIdentifier>{74af3475-f693-4e85-ab9f-b4054dc67560}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Processor">
       <UniqueIdentifier>{ad40994c-bb6d-4450-8e5b-5d06b3ba212a}</UniqueIdentifier>
     </Filter>
@@ -37,20 +40,29 @@
     <Filter Include="FilesLayer">
       <UniqueIdentifier>{0d01fc03-b913-415b-b9d1-061aba53c1b9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Process\NewFilter1">
+    <Filter Include="Process\SystemProcess">
       <UniqueIdentifier>{b73280dc-c75b-45f8-9da1-bf89b3019bd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Process\UserProcess">
+      <UniqueIdentifier>{33b9e861-d13d-46da-ad99-4d36a61786dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataStructures">
+      <UniqueIdentifier>{c38bbe13-861b-4098-a3ca-f8c32f3ceb75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataStructures\List">
+      <UniqueIdentifier>{c68f1f87-597e-4526-839e-7c8a5b8209b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataStructures\PQueue">
+      <UniqueIdentifier>{6f8be8f9-27c9-4b68-bde6-5143cd8d288f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataStructures\Queue">
+      <UniqueIdentifier>{c46ba76b-d282-45ff-a8c3-427913749434}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataStructures\Stack">
+      <UniqueIdentifier>{65af0169-5dde-4ec7-b74b-cb6cdb7bb2ea}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DataStructures\LinkedList.h">
-      <Filter>DataStructures</Filter>
-    </ClInclude>
-    <ClInclude Include="DataStructures\Queue.h">
-      <Filter>DataStructures</Filter>
-    </ClInclude>
-    <ClInclude Include="DataStructures\Stack.h">
-      <Filter>DataStructures</Filter>
-    </ClInclude>
     <ClInclude Include="Processor\MainProcessor.h">
       <Filter>Processor</Filter>
     </ClInclude>
@@ -65,6 +77,27 @@
     </ClInclude>
     <ClInclude Include="FilesLayer\FileLayer.h">
       <Filter>FilesLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="Process\SystemProcess\SystemPocess.h">
+      <Filter>Process\SystemProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="Process\UserProcess\UserProcess.h">
+      <Filter>Process\UserProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructures\List\List.h">
+      <Filter>DataStructures\List</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructures\PQueue\PQueue.h">
+      <Filter>DataStructures\PQueue</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructures\Queue\Queue.h">
+      <Filter>DataStructures\Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructures\Stack\Stack.h">
+      <Filter>DataStructures\Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructures\Node.h">
+      <Filter>DataStructures</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
