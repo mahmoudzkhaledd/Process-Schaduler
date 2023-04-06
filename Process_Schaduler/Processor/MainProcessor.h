@@ -9,11 +9,13 @@ enum ProcessorState {
 	BUSY,
 	IDLE,
 };
+
 enum ProcessorType {
 	FCFS,
 	SJF,
 	RR,
 };
+
 class Processor {
 public:
 	
@@ -26,7 +28,7 @@ public:
 
 	void addProcess(Process process);
 	void finishProcess();
-	void executeNextProcess();
+	virtual void executeNextProcess();
 	void updateState();
 	int getUtilTime();
 	

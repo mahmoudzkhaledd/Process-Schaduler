@@ -13,13 +13,13 @@ public:
 	int numOfIoReqs;
 	int arrivalTime;
 	int responseTime;
-	int cupTime;
+	int cpuTime;
 	int terminationTime;
 	int turnAroundDuration;
 	int waitingTime;
 	
 	Process();
 	ProcessState state;
-	void execute();
+	virtual void execute();
 
 };

@@ -23,6 +23,15 @@
     <ClCompile Include="Process\UserProcess\UserProcess.cpp">
       <Filter>Process\UserProcess</Filter>
     </ClCompile>
+    <ClCompile Include="Processor\SJF\SJF.cpp">
+      <Filter>Processor\SJF</Filter>
+    </ClCompile>
+    <ClCompile Include="Processor\RR\RR.cpp">
+      <Filter>Processor\RR</Filter>
+    </ClCompile>
+    <ClCompile Include="Processor\FCFS\FCFS.cpp">
+      <Filter>Processor\FCFS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Processor">
@@ -61,6 +70,15 @@
     <Filter Include="DataStructures\Stack">
       <UniqueIdentifier>{65af0169-5dde-4ec7-b74b-cb6cdb7bb2ea}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Processor\FCFS">
+      <UniqueIdentifier>{e92f5e04-b495-4a91-b442-383cc071914f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Processor\SJF">
+      <UniqueIdentifier>{f241355d-cc76-40c8-b458-8612ee371a4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Processor\RR">
+      <UniqueIdentifier>{e504ed4c-4d98-4d4e-bcbe-b6264c83f6ce}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Processor\MainProcessor.h">
@@ -98,6 +116,15 @@
     </ClInclude>
     <ClInclude Include="DataStructures\Node.h">
       <Filter>DataStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="Processor\SJF\SJF.h">
+      <Filter>Processor\SJF</Filter>
+    </ClInclude>
+    <ClInclude Include="Processor\RR\RR.h">
+      <Filter>Processor\RR</Filter>
+    </ClInclude>
+    <ClInclude Include="Processor\FCFS\FCFS.h">
+      <Filter>Processor\FCFS</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

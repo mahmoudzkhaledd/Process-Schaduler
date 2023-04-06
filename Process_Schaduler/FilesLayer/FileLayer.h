@@ -5,5 +5,5 @@
 
 class FileLayer {
 public:
-	void loadInputFile();
+	List<Process> loadInputFile();
 };

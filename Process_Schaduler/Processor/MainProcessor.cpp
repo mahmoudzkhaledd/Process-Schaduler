@@ -3,17 +3,18 @@
 Processor::Processor(ProcessorType t) {
 	type = t;
 	state = IDLE;
+	exepectedTimeToFinish = 0;
 }
 
 void Processor::addProcess(Process process) {
 	readyProcess.enQueue(process);
-	exepectedTimeToFinish += process.cupTime;
+	exepectedTimeToFinish += process.cpuTime;
 }
 
 void Processor::finishProcess() {
 	if (!readyProcess.isEmpty()) {
 		Process p = readyProcess.top();
-		exepectedTimeToFinish -= p.cupTime;
+		exepectedTimeToFinish -= p.cpuTime;
 		readyProcess.dequeue();
 	}
 }
