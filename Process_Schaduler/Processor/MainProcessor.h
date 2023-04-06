@@ -20,8 +20,8 @@ class Processor {
 public:
 	
 	int exepectedTimeToFinish;
-	List<Process> runProcesses;
-	Queue<Process> readyProcesses;
+	List<Process*> runProcesses;
+	Queue<Process*> readyProcesses;
 	ProcessorState state;
 	ProcessorType type;
 	Processor(ProcessorType t);
