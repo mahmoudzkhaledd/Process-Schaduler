@@ -130,8 +130,6 @@
     <ClCompile Include="FilesLayer\FileLayer.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Processor\MainProcessor.cpp" />
-    <ClCompile Include="Processor\SystemProcessor\SystemProcessor.cpp" />
-    <ClCompile Include="Processor\UserProcessor\UserProcessor.cpp" />
     <ClCompile Include="Process\Process.cpp" />
     <ClCompile Include="Scheduler\Scheduler.cpp" />
     <ClCompile Include="UILayer\UI.cpp" />
@@ -142,11 +140,12 @@
     <ClInclude Include="DataStructures\Stack.h" />
     <ClInclude Include="FilesLayer\FileLayer.h" />
     <ClInclude Include="Processor\MainProcessor.h" />
-    <ClInclude Include="Processor\SystemProcessor\SystemProcessor.h" />
-    <ClInclude Include="Processor\UserProcessor\UserProcessor.h" />
     <ClInclude Include="Process\Process.h" />
     <ClInclude Include="Scheduler\Scheduler.h" />
     <ClInclude Include="UILayer\UI.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="file.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -6,11 +6,17 @@ enum ProcessorState {
 	BUSY,
 	IDLE,
 };
+enum ProcessorType {
+	FCFS,
+	SJF,
+	RR,
+};
 class Processor {
 public:
 	Queue<Process> readyProcess;
 	ProcessorState state;
-	Processor();
+	ProcessorType type;
+	Processor(ProcessorType t);
 	void executeNextProcess();
 	void updateState();
 	int getUtilTime();

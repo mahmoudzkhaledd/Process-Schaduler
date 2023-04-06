@@ -1,5 +1,5 @@
 #pragma once
 #include "../MainProcessor.h"
-class SystemProcessor : public MainProcessor {
+class SystemProcessor : public Processor {
 
 };

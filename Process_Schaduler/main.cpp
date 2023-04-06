@@ -1,8 +1,9 @@
 #include<iostream>
 #include"DataStructures/Queue.h"
-#include "Process/Process.h"
+#include "FilesLayer/FileLayer.h"
 #define null NULL
 using namespace std;
 int main() {
-	
+	FileLayer file;
+	file.loadInputFile();
 }

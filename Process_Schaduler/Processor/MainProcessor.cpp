@@ -1,6 +1,7 @@
 #include "MainProcessor.h"
 
-Processor::Processor() {
+Processor::Processor(ProcessorType t) {
+	type = t;
 	state = IDLE;
 }
 
