@@ -6,9 +6,9 @@
 using namespace std;
 template <typename T>
 class List {
-	vector<T> v;
-	/*Node<T>* head = null;
-	Node<T>* tail = null;*/
+	//vector<T> v;
+	Node<T>* front = null;
+	Node<T>* tail = null;
 public:
 	int count = 0;
 	T LastElement() {
@@ -16,64 +16,74 @@ public:
 		//return tail->val;
 		return null;
 	}
-	T ElementAt(int index) {
-		return v[index];
-		/*Node<T>* n = head;
+	T elementAt(int index) {
+		//return v[index];
+		Node<T>* n = front;
 		while (index--) {
 			n = n->next;
 		}
-		return n->val;*/
+		return n->val;
 	}
 	void insert(T val) {
-		v.push_back(val);
-		count++;
-		/*if (head == null) {
-			head = tail = new Node<T>(val, null);
+		/*v.push_back(val);
+		count++;*/
+		if (front == null) {
+			front = tail = new Node<T>(val, null);
 		}
 		else {
 			tail->next = new Node<T>(val, null);
 			tail = tail->next;
 		}
-		count++;*/
+		count++;
 	}
-	void insertIn(T val, int index) {
-		/*if (index > count) return;
-		if (index == 0) {
-			head = new Node<T>(val, head);
-			count++;
+	void insert(T val, int weight)
+	{
+		Node<T>* temp, * q;
+		temp = new Node<T>(val, null, weight);
+		if (front == NULL || weight > front->weight)
+		{
+			temp->next = front;
+			front = temp;
 		}
-		else {
-			int c = 0;
-			Node<T>* t = head;
-			while (t != null) {
-				if (c + 1 == index) {
-					Node<T>* n = t->next;
-					t->next = new Node<T>(val, n);
-					count++;
-					break;
-				}
-				c++;
-				t = t->next;
-			}
-		}*/
+		else
+		{
+			q = front;
+			while (q->next != NULL && q->next->weight >= weight)
+				q = q->next;
+			temp->next = q->next;
+			q->next = temp;
+		}
+		count++;
+	}
+	T deQueue()
+	{
+		Node<T>* temp;
+		if (front != NULL)
+		{
+			temp = front;
+			T data = temp->val;
+			front = front->next;
+			free(temp);
+			count--;
+			return data;
+		}
+	}
+	bool isEmpty() {
+		return (count == 0);
+	}
+	T top() {
+		return front->val;	
 	}
 	void Delete(T &val) {
-		for (int i = 0; i < v.size(); i++) {
-			if(v[i] == val){
-				v.erase(v.begin() + i);
-				count--;
-				return;
-			}
-		}
-		/*if (head != null && head->val == val) {
-			Node<T>* a = head->next;
-			delete head;
-			head = a;
+		if (front != null && front->val == val) {
+			Node<T>* a = front->next;
+			delete front;
+			front = a;
 			count--;
 			return;
 		}
 		Node<T>* prev = null;
-		Node<T>* t = head;
+		Node<T>* t = front;
 		while (t != null) {
 			prev = t;
 			t = t->next;
@@ -83,31 +93,6 @@ public:
 				count--;
 				break;
 			}
-		}*/
-	}
-	void DeleteAt(int index) {
-		/*if (index > count || index < 0)
-			return;
-		if (head != null && index == 0) {
-			Node<T>* a = head->next;
-			delete head;
-			head = a;
-			count--;
-			return;
 		}
-		int c = 0;
-		Node<T>* prev = null;
-		Node<T>* t = head;
-		while (t != null) {
-			prev = t;
-			t = t->next;
-			if (t != null && c + 1 == index) {
-				prev->next = t->next;
-				delete t;
-				count--;
-				break;
-			}
-			c++;
-		}*/
 	}
 };

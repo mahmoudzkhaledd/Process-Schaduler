@@ -6,18 +6,12 @@
 
 class Scheduler {
 public:
-	
-	List<Process*> NEWList;
-	List<Process*> TRMList;
-	List<Process*> BLKList;
+	int currentTime;
+	Scheduler();
+	List<Process*> allProcess; // arranged with arrival time
 	List<Processor*> processors;
-
-	void nextTimeStep();
 	Processor* getShortestProcessor();
-
-	void loadProcess(); // Load From InputFile To NEW List
-	void NEWToRDY(Processor* p);
-	void RUNtoBLK(Process* p);
-	void BLKtoRDY(Process* p);
-	void toTRM(Process* p);
+	void loadProcess();
+	void loadFromFile();
+	void nextTimeStep();
 };

@@ -9,8 +9,9 @@ Process::Process() {
 	terminationTime = 0;
 	turnAroundDuration = 0;
 	waitingTime = 0;
+	numOfIoReqs = 0;
 }
 
 void Process::execute() {
-
+	state = RUN;
 }

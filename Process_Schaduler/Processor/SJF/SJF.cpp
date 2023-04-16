@@ -1,13 +1,27 @@
 #include "SJF.h"
-SJFProcessor::SJFProcessor(ProcessorType type) : Processor(type) {
+SJFProcessor::SJFProcessor() : Processor(SJF) {
 
 }
-void SJFProcessor::executeNextProcess(){
+Process* SJFProcessor::getShortestProcess() {
+	Process* shortestProcess = null;
+	int minCpuTime = INT_MAX;
+
+	for (int i = 0; i < readyProcesses.count; i++) {
+		Process* p = readyProcesses.elementAt(i);
+		if (p->cpuTime < minCpuTime) {
+			minCpuTime = p->cpuTime;
+			shortestProcess = p;
+		}
+	}
+	return shortestProcess;
+}
+void SJFProcessor::executeNextProcess() {
 
 }
 
 void SJFProcessor::sceduleAlgo() {
-	Process* p = readyProcesses.top();
-	runProcesses.insert(p);
-	readyProcesses.dequeue();
+	if (!readyProcesses.isEmpty()) {
+		Process* shortest = getShortestProcess();
+		shortest->execute();
+	}
 }

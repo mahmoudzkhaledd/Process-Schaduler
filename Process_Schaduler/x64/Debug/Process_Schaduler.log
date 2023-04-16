@@ -1,4 +1,3 @@
 ﻿  Scheduler.cpp
-  UI.cpp
-  Generating Code...
+E:\Process_Schaduler\Process_Schaduler\DataStructures\List\List.h(70): warning C4715: 'List<Process *>::deQueue': not all control paths return a value
   Process_Schaduler.vcxproj -> E:\Process_Schaduler\x64\Debug\Process_Schaduler.exe

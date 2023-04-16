@@ -1,64 +1,50 @@
 #include "Scheduler.h"
 #include "../Processor/MainProcessor.h"
 #include "../FilesLayer/FileLayer.h"
-void Scheduler::nextTimeStep() {
-	
+
+Scheduler::Scheduler() {
+	currentTime = 0;
 }
 
 Processor* Scheduler::getShortestProcessor() {
-	Processor* minProcessor = null;
-	int minTime = 0;
+	Processor* shortest = null;
+	int time = INT_MAX;
 	for (int i = 0; i < processors.count; i++) {
-		if (processors.ElementAt(i)->exepectedTimeToFinish < minTime) {
-			minTime = processors.ElementAt(i)->exepectedTimeToFinish;
-			minProcessor = processors.ElementAt(i);
+		Processor* p = processors.elementAt(i);
+		if (p->exepectedTimeToFinish < time) {
+			time = p->exepectedTimeToFinish;
+			shortest = p;
 		}
 	}
-	return minProcessor;
+	return shortest;
 }
 
 void Scheduler::loadProcess() {
-	FileLayer f;
-	NEWList = f.loadInputFile();
-	for (int i = 0; i < NEWList.count; i++) {
-		cout << NEWList.ElementAt(i)->arrivalTime << " " << NEWList.ElementAt(i)->pid << " "
-			<< NEWList.ElementAt(i)->cpuTime << " " << NEWList.ElementAt(i)->numOfIoReqs << endl;
-	}
-}
-
-void Scheduler::NEWToRDY(Processor* p) {
-	if (NEWList.count == 0) return;
-
-	int min = 0;
-	Process* minProc = null;
-	for (int i = 0; i < NEWList.count; i++) {
-		if (NEWList.ElementAt(i)->arrivalTime < min) {
-			min = NEWList.ElementAt(i)->arrivalTime;
-			minProc = NEWList.ElementAt(i);
+	if (!processors.isEmpty() && !allProcess.isEmpty()) {
+		while (allProcess.top()->arrivalTime == currentTime) {
+			Process* process = allProcess.deQueue(); // arranged with arrival time
+			Processor* shortestProcessor = getShortestProcessor();
+			shortestProcessor->loadProcess(process);
 		}
 	}
-	Processor* prr = getShortestProcessor();
-	prr->readyProcesses.enQueue(minProc);
-	minProc->state = RDY;
-	NEWList.Delete(minProc);
 }
 
-void Scheduler::RUNtoBLK(Process* p) {
-	// Call UI To Get Input
-	BLKList.insert(p);
-	p->state = BLK;
+void Scheduler::loadFromFile() {
+	FileLayer file;
+	allProcess = file.loadInputFile();
 }
 
-// System Process and User Process. 
-// Page 7 .
-void Scheduler::BLKtoRDY(Process* p) {
-	Processor* proc = getShortestProcessor();
-	proc->readyProcesses.enQueue(p);
-	p->state = RDY;
-	BLKList.Delete(p);
-}
-
-void Scheduler::toTRM(Process* p) {
-	TRMList.insert(p);
-	p->state = TRM;
+void Scheduler::nextTimeStep() {
+	currentTime++;
+	cout << currentTime<<"== " << endl;
+	loadProcess();
+	for (int i = 0; i < processors.count; i++) {
+		Processor* p = processors.elementAt(i);
+		cout << p->getProcessorType() <<" " << p->readyProcesses.count << " :\n";
+		for (int j = 0; j < p->readyProcesses.count; j++) {
+			Process* proc = p->readyProcesses.elementAt(j);
+			cout << proc->arrivalTime << " ";
+		}
+		cout << endl;
+	}
 }

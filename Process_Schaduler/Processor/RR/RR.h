@@ -1,9 +1,10 @@
 #pragma once
 #include "../MainProcessor.h"
 class RRProcessor : public Processor {
+public:
 	int timeSlice;
 
-	RRProcessor(ProcessorType type);
+	RRProcessor();
 	virtual void executeNextProcess();
 	virtual void sceduleAlgo();
 };

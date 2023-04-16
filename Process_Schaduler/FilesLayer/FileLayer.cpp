@@ -24,7 +24,7 @@ List<Process*> FileLayer::loadInputFile() {
 	for (int i = 0; i < n; i++) {
 		Process* p = new Process();
 		stream >> p->arrivalTime >> p->pid >> p->cpuTime >> p->numOfIoReqs;
-		process.insert(p);
+		process.insert(p,-p->arrivalTime);
 	}
 	
 	stream.close();

@@ -50,7 +50,7 @@ public:
 			count--;
 			return data;
 		}
-		return null;
+		
 	}
 	int size() {
 		return count;

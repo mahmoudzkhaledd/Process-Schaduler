@@ -1,5 +1,5 @@
 #include "FCFS.h"
-FCFSProcessor::FCFSProcessor(ProcessorType type) : Processor(type) {
+FCFSProcessor::FCFSProcessor() : Processor(FCFS) {
 
 }
 void FCFSProcessor::executeNextProcess() {
@@ -7,7 +7,8 @@ void FCFSProcessor::executeNextProcess() {
 }
 
 void FCFSProcessor::sceduleAlgo() {
-	Process* p = readyProcesses.top();
-	runProcesses.insert(p);
-	readyProcesses.dequeue();
+	if (!readyProcesses.isEmpty()) {
+		Process* p = readyProcesses.elementAt(0);
+		p->execute();
+	}
 }

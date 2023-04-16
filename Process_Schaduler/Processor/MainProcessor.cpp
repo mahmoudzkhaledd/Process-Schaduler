@@ -6,17 +6,13 @@ Processor::Processor(ProcessorType t) {
 	exepectedTimeToFinish = 0;
 }
 
-void Processor::addProcess(Process* process) {
-	readyProcesses.enQueue(process);
+void Processor::loadProcess(Process* process) {
+	readyProcesses.insert(process, process->cpuTime);
 	exepectedTimeToFinish += process->cpuTime;
 }
 
 void Processor::finishProcess() {
-	if (!readyProcesses.isEmpty()) {
-		Process* p = readyProcesses.top();
-		exepectedTimeToFinish -= p->cpuTime;
-		readyProcesses.dequeue();
-	}
+	
 }
 
 void Processor::updateState() {
@@ -26,4 +22,8 @@ void Processor::updateState() {
 
 int Processor::getUtilTime() {
 	return 100;
+}
+
+int Processor::calcLoad() {
+	return 0;
 }

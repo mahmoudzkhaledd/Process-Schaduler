@@ -1,6 +1,6 @@
 #pragma once
 #include "../Process/Process.h"
-#include "../DataStructures/Queue/Queue.h"
+#include "../DataStructures/PQueue/PQueue.h"
 #include "../DataStructures/List/List.h"
 
 
@@ -20,17 +20,24 @@ class Processor {
 public:
 	
 	int exepectedTimeToFinish;
-	List<Process*> runProcesses;
-	Queue<Process*> readyProcesses;
+
+	List<Process*> runningProcesses;
+	List<Process*> readyProcesses;
+
 	ProcessorState state;
 	ProcessorType type;
 	Processor(ProcessorType t);
-
-	void addProcess(Process* process);
+	string getProcessorType() {
+		if (type == FCFS) return "FCFS";
+		else if (type == SJF) return "SJF";
+		else return "RR";
+	}
+	void loadProcess(Process* process);
 	void finishProcess();
 	virtual void executeNextProcess() = 0;
 	virtual void sceduleAlgo() = 0;
 	void updateState();
 	int getUtilTime();
-	
+	int calcLoad();
+
 };
